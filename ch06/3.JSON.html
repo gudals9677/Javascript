@@ -37,7 +37,7 @@
                             {"uid":"a102","name":"김춘추","age":"26","addr":"창원"},
                             {"uid":"a103","name":"장보고","age":"27","addr":"인천"},
                             {"uid":"a104","name":"강감찬","age":"28","addr":"서울"},
-                            {"uid":"a105","name":"이순신","age":"29","addr":"광주"},
+                            {"uid":"a105","name":"이순신","age":"29","addr":"광주"}
                         ]};
 
         for(const user of jsonData.users){
@@ -50,8 +50,25 @@
             document.write('<p>');
         }
         
+        //JSON 함수
+        const member = {
+            "uid": "a101",
+            "name": "hong",
+            "age": "11",
+            "hp": "010-1234-1234"
+        };
+        document.write('member : ' + member + '<br>');
 
+        //JSON.stringfy() : JSON을 문자열로 변환
+        const strMember = JSON.stringfy(member);
+        document.write('strMember : ' + strMember + '<br>');
 
+        //JSON.parse() : 문자열(JSON 형식을 갖는)을 JSON객체로 변환
+        const ParsedMember = JSON.parse(strMember);
+        document.write('ParsedMember.uid : ' + ParsedMember.uid + '<br>');
+        document.write('ParsedMember.name : ' + ParsedMember.name + '<br>');
+        document.write('ParsedMember.age : ' + ParsedMember.age + '<br>');
+        document.write('ParsedMember.hp : ' + ParsedMember.hp + '<br>');
     </script>
 </body>
 </html>
